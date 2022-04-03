@@ -31,12 +31,14 @@ public class Homepage {
         else if (this.browser.contains("Edge")){
             WebDriverManager.edgedriver().setup();
             this.driver=new EdgeDriver();
+            
         }
         this.driver.get(baseUrl);
     }
     @Test
     public void verifyHomepageTitle(){
         String expectedText="GIVE YOUR DATA A BOOST";
+        
       //  String expectedText="GIVE YOUR DATA A BOOSTtr"; //test to check if the test will fail
         String actualText=driver.findElement(By.xpath("//div[@class='text-container']/h1")).getText();
         Assert.assertEquals(actualText,expectedText);
