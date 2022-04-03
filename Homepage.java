@@ -39,7 +39,7 @@ public class Homepage {
     public void verifyHomepageTitle(){
         String expectedText="GIVE YOUR DATA A BOOST";
         
-      //  String expectedText="GIVE YOUR DATA A BOOSTtr"; //test to check if the test will fail
+      //  String expectedText="GIVE YOUR DATA A BOOSTtr";
         String actualText=driver.findElement(By.xpath("//div[@class='text-container']/h1")).getText();
         Assert.assertEquals(actualText,expectedText);
     }
